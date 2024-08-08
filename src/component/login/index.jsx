@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 import "./index.css";
 
 const Login = () => {
 
+  const navigate = useNavigate();
+
     const [allValues ,setValues] =useState({
         username : "",
-        password : ""
+        password : "",
+        errorMsg : "",
+        showErrorMsg : false
+
     });
 
     const onSubmitUserDetails = async(e) => {
@@ -25,10 +32,20 @@ const Login = () => {
         body : JSON.stringify(userDetails)
      }
      const response = await fetch(api,options);
-     console.log(response);
+     
 
      const data =await response.json();
-     console.log(data);
+     
+     if(response.ok === true){
+          setValues({...allValues,showErrorMsg : false,errorMsg : ""});
+           
+          Cookies.set("jwtToken", data.jwt_token);
+
+          navigate("/");
+     }
+     else{
+          setValues({...allValues,showErrorMsg : true,errorMsg : data.error_msg});
+     }
 
     }
    const onChangeUserName = (e) =>{
@@ -72,6 +89,9 @@ const Login = () => {
         <button type="submit" className="btn btn-primary">
           Login
         </button>
+        <br /><br />
+
+        {allValues.showErrorMsg ? <p className="text-danger">{allValues.errorMsg}</p> : null}
       </form>
     </div>
   );
