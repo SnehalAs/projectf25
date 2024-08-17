@@ -1,0 +1,137 @@
+.detailed-job-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.job-info {
+  max-width: 1000px;
+  background-color: rgb(29, 27, 27);
+  padding: 20px;
+  border-radius: 20px;
+  color: whitesmoke;
+  margin-top: 50px;
+}
+
+/* Job Header (Logo and Title) Styling */
+.job-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.job-company-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.job-title-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-icon {
+  color: #ffb700;
+  margin-right: 5px;
+}
+
+/* Job Location, Employment Type, and Package Styling */
+.job-location-type-package {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.location-employment {
+  display: flex;
+  align-items: center;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.mr-3 {
+  margin-right: 15px;
+}
+
+/* Job Description Styling */
+.job-description {
+  margin-top: 20px;
+}
+
+.description-title-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visit-company-btn {
+  padding: 8px 15px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.visit-company-btn:hover {
+  background-color: #0056b3;
+  color: whitesmoke;
+}
+
+/* Skills Section Styling */
+.skills-section {
+  margin-top: 20px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.skill-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* Life at Company Section */
+.life-at-company-section {
+  margin-top: 20px;
+}
+
+.life-at-company-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.life-at-company-image {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px;
+}
